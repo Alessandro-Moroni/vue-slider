@@ -37,31 +37,31 @@ createApp({
     }
   },
 
-  // methods:{
-  //   nextPrev(isNext){
-  //     isNext ? this.counter++ : this.counter--;
+  methods:{
+    nextPic(isNext){
+      isNext ? this.counter++ : this.counter--;
 
-  //     if(this.counter === this.length){
-  //       this.counter = 0;
-  //     }else if(this.counter < 0){
-  //       this.counter = this.images.length -1;
-  //     }
-  //   },
+      if(this.counter === this.images.length){
+        this.counter = 0;
+      }else if(this.counter < 0){
+        this.counter = this.images.length -1;
+      }
+    },
 
   //  autoPlay(){
   //     setInterval( ()=> {
   //        if(this.isPlayerAcive){
-  //          this.nextPrev(true)
+  //          this.nextPic(true)
   //        }
-  //      }, 20000)
+  //      }, 2000)
   //   }
-  // },
+  },
     
   
 
-  // mounted(){
-  // this.autoPlay();
-  // },
+  mounted(){
+  this.autoPlay();
+  },
 
 }).mount('#app');
 
