@@ -33,10 +33,10 @@
                 </div>
 
                 <div class="col-12 p-5"  >
-                    <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel" @mouseenter="isActiveImg = false"  @mouseleave="isActiveImg = true">
-                        <div class="my-carousel-images">
+                    <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel" >
+                        <div class="my-carousel-images"  @mouseenter="isPlayerAcive = false"  @mouseleave="isPlayerAcive = true" @dblclick="nextPic(false) = (isNext(images.counter--))">
 
-                            <div class="my-carousel-item active">
+                            <div class="my-carousel-item active" >
                                 <img class="img-fluid" :src="images[counter].url" alt="${images[i].title} picture">
                                 <div class="item-description px-3">
                                     <h2>{{images[counter].title}}</h2>
@@ -79,35 +79,3 @@
 </body>
 </html>
 
-<!-- <body>
-  <div id="app" class="d-flex align-items-center justify-content-center">
-
-  <div class="back d-flex ">
-    
-    <div class="container d-flex carousel">
-      
-      
-      <div class="img-wrapper">
-        <img :src="images[counter]" class="images" alt="">
-        
-      </div>
-      
-      
-      <div class="list-img">
-        
-        <img :src="images[counter]" class="images-list opacity" alt="">
-        
-      </div>
-      <div @click="nextPrev(false)" class="up arrow">&uArr;</div>
-      <div @click="nextPrev(true)" class="down arrow">&dArr;</div>
-      
-    </div>
-    
-    <div class="circles">
-      <div @click="counter = index" v-for="(element, index) in images" class="circle" :class="{'active',: indice === counter}"></div>
-    </div>
-
-  </div>
-  
-  <script src="js/script.js"></script>
-</body> -->

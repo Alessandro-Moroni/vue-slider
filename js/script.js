@@ -51,11 +51,15 @@ createApp({
 
    autoPlay(){
       setInterval( ()=> {
-         if(this.isActiveImg){
+         if(this.isPlayerAcive){
            this.nextPic(true)
          }
+          
+         
        }, 3000)
     }
+
+
   },
     
   
