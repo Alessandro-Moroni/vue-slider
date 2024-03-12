@@ -34,6 +34,7 @@ createApp({
       ],
       counter: 0,
       isPlayerAcive: true,
+      isActiveImg: true,
     }
   },
 
@@ -48,13 +49,13 @@ createApp({
       }
     },
 
-  //  autoPlay(){
-  //     setInterval( ()=> {
-  //        if(this.isPlayerAcive){
-  //          this.nextPic(true)
-  //        }
-  //      }, 2000)
-  //   }
+   autoPlay(){
+      setInterval( ()=> {
+         if(this.isActiveImg){
+           this.nextPic(true)
+         }
+       }, 3000)
+    }
   },
     
   
