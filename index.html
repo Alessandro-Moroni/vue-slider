@@ -53,7 +53,7 @@
                                 <span class="my-prev-hook"></span>
                             </div>
 
-                            <div v-for="(img, index) in images" :class="{'active': index === counter}" class="my-thumbnail">
+                            <div v-for="(img, index) in images" :class="{'active': index === counter}" class="my-thumbnail" @click="counter = index">
                                 <img class="img-fluid" :src="img.url" alt="Thumbnail of Svezia picture">
                             </div>
 
